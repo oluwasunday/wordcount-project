@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Django class - count</title>
+</head>
+<body>
+	<!-- we use {{ var }} to write python code in HTML -->
+	<h1>There are {{ count }} words in your text</h1>
+
+	<h1>Your Text: </h1>
+	{{ fulltext }}
+
+	<h3 style="margin-bottom: 0px">Word Count: </h3>
+	{% for word, counttotal in sortedwords %} 
+
+	{{ word }} : {{ counttotal }}
+	<br />
+
+	{% endfor %}
+	
+</body>
+</html>
+

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Django class</title>
+	<style type="text/css">
+		 a{
+		 		text-decoration: none; 
+		 		padding: 10px; 
+		 		margin: 5px; 
+		 		background-color: #00ff00}
+		 a:hover{
+			 	background-color: #600;
+			 	color: #FFF}
+		 a:active{
+			 	background-color: #fff;
+			 	color: #900}
+	</style>
+</head>
+<body>
+	<h1>WORD COUNT!</h1>
+	<hr />
+	<p> <a href="#">HOME</a> | <a href="{%  url 'about' %}">ABOUT</a> | <a href="#">SERVICES</a> | <a href="#">CONTACT</a> </p>
+	<hr />
+	<br>
+	<h3>Enter Sentence Below</h3>
+	<form action="{% url 'count' %}">
+		<textarea cols="40" rows="10" name="fulltext"></textarea> <br />
+		<input type="submit" value="Count!" />
+
+	</form>
+
+</body>
+</html>
